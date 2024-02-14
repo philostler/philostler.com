@@ -27,7 +27,7 @@ const layout = ({ children }: Props) => (
         "dark:via-slate-950",
         "via-30%",
         "to-slate-50",
-        "dark:dark:to-zinc-950"
+        "dark:dark:to-zinc-950",
       )}
     >
       {children}

@@ -9,7 +9,7 @@ const page = () => (
         "border-4",
         "border-slate-950",
         "dark:border-slate-50",
-        "rounded-full"
+        "rounded-full",
       )}
       height={200}
       priority
