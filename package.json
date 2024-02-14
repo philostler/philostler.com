@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "lint": "next lint --fix",
     "lint:check": "next lint",
-    "start": "next start"
+    "start": "next dev",
+    "start:production": "next start"
   },
   "dependencies": {
     "clsx": "2.1.0",
