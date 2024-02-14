@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
+import clsx from "clsx";
 
 type Props = Readonly<{
   children: ReactNode;
@@ -16,7 +17,21 @@ const metadata: Metadata = {
 
 const layout = ({ children }: Props) => (
   <html lang="en">
-    <body className={inter.className}>{children}</body>
+    <body
+      className={clsx(
+        inter.className,
+        "bg-gradient-to-br",
+        "from-slate-50",
+        "dark:from-zinc-950",
+        "via-blue-100",
+        "dark:via-slate-950",
+        "via-30%",
+        "to-slate-50",
+        "dark:dark:to-zinc-950"
+      )}
+    >
+      {children}
+    </body>
   </html>
 );
 
