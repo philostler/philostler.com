@@ -10,6 +10,9 @@ const page = () => (
         "border-slate-950",
         "dark:border-slate-50",
         "rounded-full",
+        "shadow-lg",
+        "shadow-slate-500",
+        "dark:shadow-indigo-500",
       )}
       height={200}
       priority
