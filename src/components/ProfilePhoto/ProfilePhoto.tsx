@@ -1,7 +1,9 @@
 import clsx from "clsx";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 
-const ProfilePhoto = () => (
+type Props = Pick<ImageProps, "className">;
+
+const ProfilePhoto = ({ className }: Props) => (
   <Image
     alt="Phil Ostler's Profile"
     className={clsx(
@@ -12,6 +14,7 @@ const ProfilePhoto = () => (
       "shadow-lg",
       "shadow-slate-500",
       "dark:shadow-indigo-500",
+      className,
     )}
     height={200}
     priority
