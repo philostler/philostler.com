@@ -4,7 +4,7 @@ import {
   ProfilePhoto,
   GitHubLinkButton,
   LinkedInLinkButton,
-  TravelledSection,
+  TravelSection,
   XLinkButton,
 } from "@/components";
 
@@ -13,7 +13,7 @@ const page = () => (
     <Header />
     <ProfilePhoto />
     <div className="flex flex-col items-center">
-      <TravelledSection />
+      <TravelSection />
     </div>
     <div className="flex flex-col gap-y-3">
       <GitHubLinkButton />

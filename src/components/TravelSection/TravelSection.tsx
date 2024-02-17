@@ -1,19 +1,13 @@
 import { Flag, Section } from "@/components";
 import { Tooltip } from "flowbite-react";
-import Image from "next/image";
 
-const TravelledSection = () => (
+const TravelSection = () => (
   <Section
     icon={
       <Tooltip content="Travelled">
-        <Image
-          alt="Travelled"
-          className="rounded-full bg-white border-white border-4"
-          height={48}
-          priority
-          src="/earth.svg"
-          width={48}
-        />
+        <p className="rounded-full bg-white border-white border-4 text-4xl text-center h-12 w-12">
+          🌍
+        </p>
       </Tooltip>
     }
   >
@@ -37,4 +31,4 @@ const TravelledSection = () => (
   </Section>
 );
 
-export { TravelledSection };
+export { TravelSection };
