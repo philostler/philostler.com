@@ -6,4 +6,5 @@ export * from "./LinkedInLinkButton";
 export * from "./ProfilePhoto";
 export * from "./Section";
 export * from "./TravelSection";
+export * from "./WorkSection";
 export * from "./XLinkButton";

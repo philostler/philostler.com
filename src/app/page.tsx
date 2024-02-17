@@ -6,13 +6,15 @@ import {
   LinkedInLinkButton,
   TravelSection,
   XLinkButton,
+  WorkSection,
 } from "@/components";
 
 const page = () => (
   <main className="flex flex-col gap-y-8 items-center min-h-screen m-24">
     <Header />
     <ProfilePhoto />
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col gap-y-3">
+      <WorkSection />
       <TravelSection />
     </div>
     <div className="flex flex-col gap-y-3">

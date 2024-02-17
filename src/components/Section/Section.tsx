@@ -8,7 +8,9 @@ type Props = {
 const Section = ({ children, icon }: Props) => (
   <div className="flex flex-col items-center">
     {icon}
-    <div className="flex flex-row flex-wrap justify-center">{children}</div>
+    <div className="flex flex-row flex-wrap justify-center text-center">
+      {children}
+    </div>
   </div>
 );
 
