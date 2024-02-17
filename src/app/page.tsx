@@ -5,6 +5,7 @@ import {
   GitHubLinkButton,
   LinkedInLinkButton,
   TravelledSection,
+  XLinkButton,
 } from "@/components";
 
 const page = () => (
@@ -17,6 +18,7 @@ const page = () => (
     <div className="flex flex-col gap-y-3">
       <GitHubLinkButton />
       <LinkedInLinkButton />
+      <XLinkButton />
     </div>
   </main>
 );
