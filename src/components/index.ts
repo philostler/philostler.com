@@ -3,6 +3,7 @@ export * from "./GitHubLinkButton";
 export * from "./Header";
 export * from "./LinkButton";
 export * from "./LinkedInLinkButton";
+export * from "./LocationSection";
 export * from "./ProfilePhoto";
 export * from "./Section";
 export * from "./TravelSection";

@@ -7,6 +7,7 @@ import {
   TravelSection,
   XLinkButton,
   WorkSection,
+  LocationSection,
 } from "@/components";
 
 const page = () => (
@@ -14,6 +15,7 @@ const page = () => (
     <Header />
     <ProfilePhoto />
     <div className="flex flex-col gap-y-3">
+      <LocationSection />
       <WorkSection />
       <TravelSection />
     </div>
