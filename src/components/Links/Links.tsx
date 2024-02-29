@@ -4,14 +4,7 @@ import { LinkButton } from "./components";
 const Links = () => (
   <>
     <LinkButton href="mailto:contact@philostler.com?subject=Enquiry from philostler.com">
-      <Image
-        alt="Email Me"
-        className="dark:invert"
-        height={24}
-        priority
-        src="/email.png"
-        width={32}
-      />
+      <Image alt="Email Me" height={24} priority src="/email.png" width={32} />
     </LinkButton>
     <LinkButton href="https://github.com/philostler">
       <Image
@@ -26,7 +19,6 @@ const Links = () => (
     <LinkButton href="https://www.linkedin.com/in/philostler">
       <Image
         alt="LinkedIn Logo"
-        className="dark:invert"
         height={24}
         priority
         src="/linkedin.png"
