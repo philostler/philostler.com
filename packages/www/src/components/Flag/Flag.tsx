@@ -5,6 +5,7 @@ type Props = {
 };
 
 const COUNTRIES = {
+  AT: { name: "Austria", flag: "🇦🇹" },
   BE: { name: "Belgium", flag: "🇧🇪" },
   CY: { name: "Cyprus", flag: "🇨🇾" },
   GB: { name: "United Kingdom", flag: "🇬🇧" },
