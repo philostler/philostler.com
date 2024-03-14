@@ -19,7 +19,7 @@ jobs:
       - name: Setup
         uses: actions/setup-node@v4
         with:
-          cache-dependency-path: packages/www
+          cache-dependency-path: packages/www/yarn.lock
           cache: yarn
           node-version: 20.11.1
       - name: Cache
