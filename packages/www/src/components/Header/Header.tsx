@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import { Ubuntu } from "next/font/google";
+import { Allison } from "next/font/google";
 
-const ubuntu = Ubuntu({
-  weight: "700",
+const ubuntu = Allison({
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -21,7 +21,7 @@ const Header = () => (
       "w-full",
     )}
   >
-    <h1 className={clsx("drop-shadow", "text-xl")}>Phil Ostler</h1>
+    <h1 className={clsx("drop-shadow", "text-5xl")}>Phil Ostler</h1>
   </div>
 );
 

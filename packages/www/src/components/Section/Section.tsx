@@ -1,12 +1,18 @@
 import clsx from "clsx";
 import { Tooltip } from "flowbite-react";
 import { ReactNode } from "react";
+import { Red_Hat_Display } from "next/font/google";
 
 type Props = {
   children: ReactNode;
   icon: ReactNode;
   name: ReactNode;
 };
+
+const redHatDisplay = Red_Hat_Display({
+  weight: "600",
+  subsets: ["latin"],
+});
 
 const Section = ({ children, icon, name }: Props) => (
   <div className={clsx("flex-col", "flex", "items-center")}>
@@ -19,6 +25,7 @@ const Section = ({ children, icon, name }: Props) => (
           "dark:bg-zinc-900",
           "dark:border-zinc-900",
           "h-11",
+          "mb-2",
           "rounded-full",
           "text-3xl",
           "text-center",
@@ -30,10 +37,13 @@ const Section = ({ children, icon, name }: Props) => (
     </Tooltip>
     <div
       className={clsx(
+        redHatDisplay.className,
         "flex-row",
         "flex-wrap",
         "flex",
         "justify-center",
+        "mb-3",
+        "text-lg",
         "text-center",
       )}
     >
