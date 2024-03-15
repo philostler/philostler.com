@@ -1,0 +1,54 @@
+name: Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      component:
+        description: Component
+        options:
+          - www
+        required: true
+        type: choice
+      version:
+        description: Version
+        required: true
+        type: string
+permissions:
+  id-token: write
+  pages: write
+jobs:
+  download:
+    name: Download
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download release artifact
+        uses: robinraju/release-downloader@v1.9
+        with:
+          extract: true
+          fileName: ${{ inputs.component }}-${{ inputs.version }}.zip
+          tag: ${{ inputs.component }}-${{ inputs.version }}
+      - name: List Files
+        run: ls -R
+      - name: Delete release artifact
+        run: rm ${{ inputs.component }}-${{ inputs.version }}.zip
+      - name: List Files
+        run: ls -R
+      - name: Fix permissions
+        run: |
+          chmod -c -R +rX "." | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
+      - name: Upload workflow artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  deploy:
+    name: Deploy
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: download
+    steps:
+      - name: Deploy
+        id: deploy
+        uses: actions/deploy-pages@v4
