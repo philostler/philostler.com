@@ -1,0 +1,47 @@
+name: Push main
+on:
+  push:
+    branches: main
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    outputs:
+      artifact_name: www-${{ steps.release.outputs['packages/www--major'] }}.${{ steps.release.outputs['packages/www--minor'] }}.${{ steps.release.outputs['packages/www--patch'] }}
+      release_tag: ${{ steps.release.outputs['packages/www--tag_name'] }}
+      releases_created: ${{ steps.release.outputs.releases_created }}
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          config-file: release-config.json
+          manifest-file: release-manifest.json
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+  format:
+    name: Format
+    needs: release
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/format.yml
+  lint:
+    name: Lint
+    needs: release
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/lint.yml
+  build:
+    name: Build
+    needs: [release, format, lint]
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/build.yml
+    with:
+      artifact_name: needs.release.outputs.artifact_name
+  upload-release-artifact:
+    name: Upload to release
+    needs: [release, build]
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/upload-release-artifact.yml
+    with:
+      artifact_name: needs.release.outputs.artifact_name
+      release_tag: needs.release.outputs.release_tag
