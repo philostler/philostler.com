@@ -1,0 +1,9 @@
+{
+  "include-v-in-tag": false,
+  "packages": {
+    "packages/www": {
+      "include-v-in-tag": false
+    }
+  },
+  "pull-request-header": ":package: :rocket: *Next Release Created* - Release Please"
+}

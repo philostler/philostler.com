@@ -1,0 +1,27 @@
+on:
+  workflow_call:
+    inputs:
+      upload-artifact:
+        default: false
+        description: Whether to upload the build artifact
+        required: false
+        type: boolean
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/workflows/setup
+      - name: Build
+        # Linting has already been validated so skip to improve build speed
+        run: yarn build --no-lint
+        working-directory: packages/www
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        if: ${{ inputs.upload-artifact }}
+        with:
+          name: "@philostler.com/www"
+          path: packages/www/out
