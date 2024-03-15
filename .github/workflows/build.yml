@@ -1,0 +1,26 @@
+name: Build
+on:
+  workflow_call:
+    inputs:
+      artifact_name:
+        description: Name of uploaded artifact
+        required: true
+        type: string
+jobs:
+  www:
+    name: www
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/workflows/www/setup
+      - name: Build
+        # Linting is validated in separate workflow
+        run: yarn build --no-lint
+        working-directory: packages/www
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: inputs.artifact_name
+          path: packages/www/out
