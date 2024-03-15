@@ -1,0 +1,40 @@
+name: Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      component:
+        description: Component
+        options:
+          - www
+        required: true
+        type: choice
+      version:
+        description: Version
+        required: true
+        type: string
+permissions:
+  id-token: write
+  pages: write
+jobs:
+  deploy:
+    name: Deploy
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: robinraju/release-downloader@v1.9
+        name: Download release
+        with:
+          extract: true
+          fileName: ${{ inputs.component }}-${{ inputs.version }}.zip
+          tag: ${{ inputs.component }}-${{ inputs.version }}
+      - name: List Files
+        run: ls -R
+      - name: Upload
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ inputs.component }}-${{ inputs.version }}
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
