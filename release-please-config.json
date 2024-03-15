@@ -1,5 +1,7 @@
 {
   "packages": {
-    "packages/www": {}
+    "packages/www": {
+      "group-pull-request-title-pattern": "chore: release ${branch}"
+    }
   }
 }
