@@ -11,7 +11,7 @@ type Props = Readonly<{
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata: Metadata = {
-  title: "Phil Ostler",
+  title: "Phil Ostler Test",
   description:
     "Personal website for Phil Ostler: Engineer, Founder, Duathlete, Aspiring Triathlete.",
 };
