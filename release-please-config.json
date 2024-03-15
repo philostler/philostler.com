@@ -1,0 +1,8 @@
+{
+  "include-v-in-tag": false,
+  "packages": {
+    "packages/www": {}
+  },
+  "pull-request-header": ":rocket: In the Next Release...",
+  "separate-pull-requests": true
+}
