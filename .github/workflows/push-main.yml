@@ -1,0 +1,47 @@
+name: Push main
+on:
+  push:
+    branches: main
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      tag_name: ${{ steps.release.outputs['packages/www--tag_name'] }}
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          config-file: release-please-config.json
+          manifest-file: release-please-manifest.json
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+      - name: "Example output call between steps"
+        run: echo '${{ toJSON(steps) }}'
+  format:
+    name: Format
+    needs: release
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/format.yml
+  lint:
+    name: Lint
+    needs: release
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/lint.yml
+  build:
+    name: Build
+    needs: [release, format, lint]
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/build.yml
+    with:
+      upload-artifact: true
+  upload-to-release:
+    name: Upload to release
+    needs: [release, build]
+    if: needs.release.outputs.releases_created == 'true'
+    uses: ./.github/workflows/upload-to-release.yml
+    with:
+      tag_name: ${{ needs.release.outputs.tag_name }}
