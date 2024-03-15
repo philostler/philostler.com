@@ -1,0 +1,8 @@
+name: Format
+runs:
+  using: composite
+  steps:
+    - name: Format
+      run: yarn format:check
+      shell: bash
+      working-directory: packages/www
