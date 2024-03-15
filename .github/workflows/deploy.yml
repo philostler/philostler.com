@@ -1,0 +1,23 @@
+name: Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      component:
+        description: Component
+        options:
+          - "@philostler.com/www"
+        required: true
+        type: choice
+      version:
+        description: Version
+        required: true
+        type: string
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: robinraju/release-downloader@v1.9
+        with:
+          tag: ${{ inputs.component }}-${{ inputs.version }}
+          zipBall: true
