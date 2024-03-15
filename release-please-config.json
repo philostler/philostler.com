@@ -1,0 +1,12 @@
+{
+  "include-v-in-tags": false,
+  "packages": {
+    "packages/www": {}
+  },
+  "plugins": [
+    {
+      "type": "sentence-case"
+    }
+  ],
+  "pull-request-header": ":robot: Release Please says *\"I have created a new release\"*"
+} 
