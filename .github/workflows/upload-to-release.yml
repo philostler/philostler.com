@@ -1,0 +1,32 @@
+name: Upload to Release
+on:
+  workflow_call:
+    inputs:
+      tag_name:
+        description: Tag name to upload to
+        required: true
+        type: string
+jobs:
+  www:
+    name: www
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: www
+          path: www
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Zip
+        run: zip -r www.zip www
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Upload to release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ inputs.tag_name }} www.zip
