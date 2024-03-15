@@ -1,0 +1,42 @@
+name: Upload to Release
+on:
+  workflow_call:
+    inputs:
+      tag_name:
+        description: Tag name to upload to
+        required: true
+        type: string
+      version:
+        description: Version number
+        required: true
+        type: string
+jobs:
+  www:
+    name: www
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: www
+          path: www
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Zip
+        run: zip -r @philostler.com-www-${{ inputs.version }}.zip www
+      - name: Zip2
+        run: zip -r www-${{ inputs.version }}.zip www
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Upload to release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ inputs.tag_name }} @philostler.com-www-${{ inputs.version }}.zip
+      - name: Upload to release2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ inputs.tag_name }} www-${{ inputs.version }}.zip
