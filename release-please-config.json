@@ -1,4 +1,6 @@
 {
+  "group-pull-request-title-pattern": "chore: release ${branch} badger2",
+  "separate-pull-requests": false,
   "packages": {
     "packages/www": {}
   }
