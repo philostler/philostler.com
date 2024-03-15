@@ -1,4 +1,5 @@
 {
+  "pull-request-header": ":robot: Release Please says *\"I have created a new release\"*",
   "packages": {
     "packages/www": {}
   }
