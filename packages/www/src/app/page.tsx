@@ -7,6 +7,9 @@ import {
   WorkSection,
   LocationSection,
 } from "@/components";
+import { logVersion } from "./logVersion";
+
+logVersion();
 
 const page = () => (
   <main className="flex flex-col gap-y-8 items-center min-h-screen m-24">
