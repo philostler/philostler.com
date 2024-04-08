@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/philostler/philostler.com/compare/www-1.2.0...www-1.2.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* broken flowbite tailwind integration ([fe32832](https://github.com/philostler/philostler.com/commit/fe328321441a7593829b8d543b66dd34399fe8c1))
+
 ## [1.2.0](https://github.com/philostler/philostler.com/compare/www-1.1.0...www-1.2.0) (2024-04-08)
 
 
