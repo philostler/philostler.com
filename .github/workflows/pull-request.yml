@@ -1,8 +1,8 @@
 name: Pull Request
 on:
   pull_request:
-    branches:
-      - "!release-please*/*"
+    branches-ignore:
+      - "release-please*/*"
 jobs:
   format:
     name: Format
