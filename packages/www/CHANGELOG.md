@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/philostler/philostler.com/compare/www-1.1.0...www-1.2.0) (2024-04-08)
+
+
+### Features
+
+* add logged version output ([d6d018b](https://github.com/philostler/philostler.com/commit/d6d018badb31eb6975a05464b0cc5b96fc6c24be))
+
 ## [1.1.0](https://github.com/philostler/philostler.com/compare/www-v1.0.0...www-1.1.0) (2024-04-07)
 
 
