@@ -1,14 +1,14 @@
 import type { Config } from "tailwindcss";
-import flowbitePlugin from "flowbite/plugin";
+import flowbiteReactTailwind from "flowbite-react/tailwind";
 
 const config: Config = {
   content: [
-    "node_modules/flowbite-react/lib/esm/**/*.js",
+    flowbiteReactTailwind.content(),
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "media",
-  plugins: [flowbitePlugin],
+  plugins: [flowbiteReactTailwind.plugin()],
 };
 export default config;
