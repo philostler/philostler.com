@@ -2,6 +2,7 @@ import { Flag, Section } from "@/components";
 
 const TravelSection = () => (
   <Section icon="🌍" name="Travelled">
+    <Flag countryCode="AL" />
     <Flag countryCode="AT" />
     <Flag countryCode="BE" />
     <Flag countryCode="CY" />
