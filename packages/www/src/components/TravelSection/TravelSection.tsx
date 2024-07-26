@@ -12,6 +12,7 @@ const TravelSection = () => (
     <Flag countryCode="IT" />
     <Flag countryCode="LU" />
     <Flag countryCode="MT" />
+    <Flag countryCode="ME" />
     <Flag countryCode="NL" />
     <Flag countryCode="PL" />
     <Flag countryCode="PT" />
