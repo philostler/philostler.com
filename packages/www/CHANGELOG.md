@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/philostler/philostler.com/compare/www-1.2.1...www-1.3.0) (2024-07-26)
+
+
+### Features
+
+* add albania flag ([6849f41](https://github.com/philostler/philostler.com/commit/6849f41c9010afc666a2999e2c16148f586f14bc))
+* add montenegro flag ([b4ad254](https://github.com/philostler/philostler.com/commit/b4ad254d926edaf2cf35476284d74a1d7dad8f99))
+
 ## [1.2.1](https://github.com/philostler/philostler.com/compare/www-1.2.0...www-1.2.1) (2024-04-08)
 
 
