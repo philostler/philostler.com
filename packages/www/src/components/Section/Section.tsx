@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Tooltip } from "flowbite-react";
-import { ReactNode } from "react";
 import { Red_Hat_Display } from "next/font/google";
+import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
