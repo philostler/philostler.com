@@ -17,6 +17,7 @@ const COUNTRIES = {
   IT: { name: "Italy", flag: "🇮🇹" },
   LU: { name: "Luxembourg", flag: "🇱🇺" },
   MT: { name: "Malta", flag: "🇲🇹" },
+  ME: { name: "Montenegro", flag: "🇲🇪" },
   NL: { name: "Netherlands", flag: "🇳🇱" },
   PL: { name: "Poland", flag: "🇵🇱" },
   PT: { name: "Portugal", flag: "🇵🇹" },
