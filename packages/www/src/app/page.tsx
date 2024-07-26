@@ -1,12 +1,14 @@
 "use client";
+
 import {
   Header,
   Links,
+  LocationSection,
   ProfilePhoto,
   TravelSection,
   WorkSection,
-  LocationSection,
 } from "@/components";
+
 import { logVersion } from "./logVersion";
 
 logVersion();

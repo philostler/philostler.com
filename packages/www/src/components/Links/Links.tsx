@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { LinkButton } from "./components";
 
 const Links = () => (

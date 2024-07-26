@@ -1,5 +1,4 @@
 import packageJson from "../../package.json";
-
 import { log } from "./log";
 
 const logVersion = () => {
