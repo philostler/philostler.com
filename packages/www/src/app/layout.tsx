@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 const metadata: Metadata = {
   title: "Phil Ostler",
   description:
-    "Personal website for Phil Ostler: Engineer, Founder, Duathlete, Aspiring Triathlete.",
+    "Personal website for Phil Ostler: Engineer, Duathlete, Aspiring Triathlete.",
 };
 
 const layout = ({ children }: Props) => (
