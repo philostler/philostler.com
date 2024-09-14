@@ -2,7 +2,7 @@ import { Section } from "@/components";
 
 const WorkSection = () => (
   <Section icon="💪" name="Work">
-    Engineer • Founder • Duathlete • Aspiring Triathlete
+    Engineer • Duathlete • Aspiring Triathlete
   </Section>
 );
 
