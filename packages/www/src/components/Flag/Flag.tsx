@@ -1,35 +1,38 @@
 import { Tooltip } from "flowbite-react";
 
 type Props = {
-  countryCode: keyof typeof COUNTRIES;
+  country: keyof typeof COUNTRIES;
 };
 
 const COUNTRIES = {
-  AL: { name: "Albania", flag: "🇦🇱" },
-  AT: { name: "Austria", flag: "🇦🇹" },
-  BE: { name: "Belgium", flag: "🇧🇪" },
-  CY: { name: "Cyprus", flag: "🇨🇾" },
-  GB: { name: "United Kingdom", flag: "🇬🇧" },
-  FR: { name: "France", flag: "🇫🇷" },
-  DE: { name: "Germany", flag: "🇩🇪" },
-  IS: { name: "Iceland", flag: "🇮🇸" },
-  IM: { name: "Isle of Man", flag: "🇮🇲" },
-  IT: { name: "Italy", flag: "🇮🇹" },
-  LU: { name: "Luxembourg", flag: "🇱🇺" },
-  MT: { name: "Malta", flag: "🇲🇹" },
-  ME: { name: "Montenegro", flag: "🇲🇪" },
-  NL: { name: "Netherlands", flag: "🇳🇱" },
-  PL: { name: "Poland", flag: "🇵🇱" },
-  PT: { name: "Portugal", flag: "🇵🇹" },
-  RO: { name: "Romania", flag: "🇷🇴" },
-  ES: { name: "Spain", flag: "🇪🇸" },
-  SE: { name: "Sweden", flag: "🇸🇪" },
-  US: { name: "United States of America", flag: "🇺🇸" },
+  Albania: "🇦🇱",
+  Austria: "🇦🇹",
+  Belgium: "🇧🇪",
+  Cyprus: "🇨🇾",
+  England: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  France: "🇫🇷",
+  Germany: "🇩🇪",
+  Iceland: "🇮🇸",
+  "Isle of Man": "🇮🇲",
+  Italy: "🇮🇹",
+  Luxembourg: "🇱🇺",
+  Malta: "🇲🇹",
+  Montenegro: "🇲🇪",
+  Netherlands: "🇳🇱",
+  Poland: "🇵🇱",
+  Portugal: "🇵🇹",
+  Romania: "🇷🇴",
+  Scotland: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  Spain: "🇪🇸",
+  Sweden: "🇸🇪",
+  "United Kingdom": "🇬🇧",
+  "United States of America": "🇺🇸",
+  Wales: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
 };
 
-const Flag = ({ countryCode }: Props) => (
-  <Tooltip content={COUNTRIES[countryCode].name}>
-    <span className="text-2xl">{COUNTRIES[countryCode].flag}</span>
+const Flag = ({ country }: Props) => (
+  <Tooltip content={country}>
+    <span className="text-2xl">{COUNTRIES[country]}</span>
   </Tooltip>
 );
 
