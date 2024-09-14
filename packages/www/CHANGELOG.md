@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/philostler/philostler.com/compare/www-1.3.0...www-1.4.0) (2024-09-14)
+
+
+### Features
+
+* add more uk flags ([4d3e514](https://github.com/philostler/philostler.com/commit/4d3e514f14b9a64fd6d59a4c52f411d9c6534396))
+* remove founder copy ([8b2de80](https://github.com/philostler/philostler.com/commit/8b2de8067f6908a43ff12e84b3ed03f15512a33d))
+
 ## [1.3.0](https://github.com/philostler/philostler.com/compare/www-1.2.1...www-1.3.0) (2024-07-26)
 
 
