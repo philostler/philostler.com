@@ -19,6 +19,7 @@ const COUNTRIES = {
   Malta: "🇲🇹",
   Montenegro: "🇲🇪",
   Netherlands: "🇳🇱",
+  Norway: "🇳🇴",
   Poland: "🇵🇱",
   Portugal: "🇵🇹",
   Romania: "🇷🇴",
