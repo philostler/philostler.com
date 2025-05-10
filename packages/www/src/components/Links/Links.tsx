@@ -26,16 +26,6 @@ const Links = () => (
         width={98}
       />
     </LinkButton>
-    <LinkButton href="https://twitter.com/philostler">
-      <Image
-        alt="X Logo"
-        className="dark:invert"
-        height={24}
-        priority
-        src="/x.png"
-        width={23}
-      />
-    </LinkButton>
   </>
 );
 
