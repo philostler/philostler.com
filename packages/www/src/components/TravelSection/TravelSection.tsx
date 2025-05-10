@@ -16,6 +16,7 @@ const TravelSection = () => (
     <Flag country="Malta" />
     <Flag country="Montenegro" />
     <Flag country="Netherlands" />
+    <Flag country="Norway" />
     <Flag country="Poland" />
     <Flag country="Portugal" />
     <Flag country="Romania" />
