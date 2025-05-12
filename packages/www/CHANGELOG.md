@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.0](https://github.com/philostler/philostler.com/compare/www-1.4.0...www-1.5.0) (2025-05-12)
+
+
+### Features
+
+* add norway flag ([0359416](https://github.com/philostler/philostler.com/commit/03594166240b461ba5e9a597e3eab6c736fcf29c))
+* remove x ([9c0da38](https://github.com/philostler/philostler.com/commit/9c0da384e01230bf83811c0aa0711b8c357645b4))
+* update profile ([bce2b00](https://github.com/philostler/philostler.com/commit/bce2b00e6239e2d965f597061c2dff497bc1882c))
+
 ## [1.4.0](https://github.com/philostler/philostler.com/compare/www-1.3.0...www-1.4.0) (2024-09-14)
 
 
